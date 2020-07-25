@@ -1,0 +1,105 @@
+package com.mycompany.beginning_enginneers;
+
+import javax.swing.JOptionPane;
+
+
+public class Principal {
+
+    
+    public static void main(String[] args) {
+    //Menu de bienvenida y mostrar al usuario nuestra gama y cantidad de productos
+    
+        int opcion = 0;
+            JOptionPane.showMessageDialog(null,"***********Bienvenido a Beginning Enginneers***********\n" + 
+                                               "***********Favor seleccionar una opción***********\n");
+        do{
+           opcion = Integer.parseInt(JOptionPane.showInputDialog("1. CPU's\n" + "2. GPUs\n" + "3. RAM\n" + "4. MOTHERBOARD\n" + "5. PS\n" + "0. Salir"));
+           
+           switch(opcion){
+           
+               case 1:
+                        int cpuOp = 0;
+                        JOptionPane.showMessageDialog(null,"***********Bienvenido al apartado de CPU´s***********\n" + 
+                                                           "***********Favor seleccionar una opción***********\n");
+                       do{
+                           cpuOp = Integer.parseInt(JOptionPane.showInputDialog("1. Intel Pentium G5400, Precio: 25mil colones (Gama baja)\n" + 
+                                                                                "2. AMD Ryzen 5 3600X, Precio: 150mil colones (Gama media)\n" + 
+                                                                                "3. AMD Ryzen 9 3950X, Precio: 500mil colones (Gama alta)\n" + 
+                                                                                "0. Ir al menu principal"));
+                           switch(cpuOp){
+                               case 1://CPUs
+                                   int CProducto = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto = "Intel Pentium G5400";
+                                   String marca = "Intel";
+                                   int PrecioProducto = 25000;
+                                   CPUs gamabaja = new CPUs(NProducto, CProducto, marca, PrecioProducto);
+                                   gamabaja.CalcularPrecio(PrecioProducto, CProducto);
+                                   break;
+                               case 2:
+                                   int CProducto2 = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto2 = "AMD Ryzen 5 3600X";
+                                   String marca2 = "AMD";
+                                   int PrecioProducto2 = 150000;
+                                   CPUs gamamedia = new CPUs(NProducto2, CProducto2, marca2, PrecioProducto2);
+                                   gamamedia.CalcularPrecio(PrecioProducto2, CProducto2);
+                                   break;
+                               case 3:
+                                   int CProducto3 = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto3 = "AMD Ryzen 9 3950X";
+                                   String marca3 = "AMD";
+                                   int PrecioProducto3 = 500000;
+                                   CPUs gamaAlta = new CPUs(NProducto3, CProducto3, marca3, PrecioProducto3);
+                                   gamaAlta.CalcularPrecio(PrecioProducto3, CProducto3);
+                                   break;
+                                   
+                         
+                           }// fin de switch anidado para el cpuOp
+                       }while(cpuOp != 0);// fin de do while para el cpuOp
+           
+               case 2://GPUs
+
+               case 3://RAM
+                   int RAMOp = 0;
+                        JOptionPane.showMessageDialog(null,"***********Bienvenido al apartado de RAM***********\n" + 
+                                                           "***********Favor seleccionar una opción***********\n");
+                       do{
+                           RAMOp = Integer.parseInt(JOptionPane.showInputDialog("1. G.Skill Value 8GB DDR4 2666, Precio: 20mil colones (Gama baja)\n" + 
+                                                                                "2. ADATA XPG SpecTrix D50G 8GB DDR4 3600, Precio: 24mil colones (Gama media)\n" + 
+                                                                                "3. TeamGroup T-Force Delta RGB 16GB DDR4 2666, Precio: 43mil colones (Gama alta)\n" + 
+                                                                                "0. Ir al menu principal"));
+                           switch(RAMOp){
+                               case 1:
+                                   int CProducto = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto = "G.Skill Value 8GB DDR4 2666";
+                                   String marca = "G.Skill";
+                                   int PrecioProducto = 20000;
+                                   RAM gamabaja = new RAM(NProducto, CProducto, marca, PrecioProducto);
+                                   gamabaja.CalcularPrecio(PrecioProducto, CProducto);
+                                   break;
+                               case 2:
+                                   int CProducto2 = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto2 = "ADATA XPG SpecTrix D50G 8GB DDR4 3600";
+                                   String marca2 = "ADATA";
+                                   int PrecioProducto2 = 24000;
+                                   RAM gamamedia = new RAM(NProducto2, CProducto2, marca2, PrecioProducto2);
+                                   gamamedia.CalcularPrecio(PrecioProducto2, CProducto2);
+                                   break;
+                               case 3:
+                                   int CProducto3 = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto3 = "TeamGroup T-Force Delta RGB 16GB DDR4 2666";
+                                   String marca3 = "TeamGroup";
+                                   int PrecioProducto3 = 43000;
+                                   RAM gamaAlta = new RAM(NProducto3, CProducto3, marca3, PrecioProducto3);
+                                   gamaAlta.CalcularPrecio(PrecioProducto3, CProducto3);
+                                   break;
+                                   
+                                   
+                            }// fin de switch anidado para el ramOp
+                       }while(RAMOp != 0);// fin de do while para el ramOp
+           }// fin del switch primario
+        }while(opcion != 0);
+
+        
+    }// fin del main
+  
+}// fin del Principal
