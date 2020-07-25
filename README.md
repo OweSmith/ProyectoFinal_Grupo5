@@ -1,2 +1,2 @@
 # ProyectoFinal_Grupo5
-Integrantes : Isabel , Owen, Sebastian, Andrés, Ezekiel y Josué 
+Integrantes : Isabel , Owen, Sebastian, Andrés, Ezekiel Josue
