@@ -1,6 +1,8 @@
 
 package com.mycompany.beginning_enginneers;
 
+import javax.swing.JOptionPane;
+
 
 public class GPUs {
    public int    precio; 
@@ -17,6 +19,11 @@ public class GPUs {
         this.stock = stock;
     }// fin del constructoor GPUs
     
-    
+      public void CalcularPrecio(int precio, int cProducto){
+        int resultadoCPU;
+        resultadoCPU = precio*cProducto;
+        JOptionPane.showMessageDialog(null, "Precio total por los CPUs: "+resultadoCPU);
+
+   }
     
 }// fin de GPUs

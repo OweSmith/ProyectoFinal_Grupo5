@@ -57,7 +57,45 @@ public class Principal {
                        }while(cpuOp != 0);// fin de do while para el cpuOp
            
                case 2://GPUs
-
+                   
+                    int GPUs = 0;
+                        JOptionPane.showMessageDialog(null,"***********Bienvenido al apartado de GPU's***********\n" + 
+                                                           "***********Favor seleccionar una opción***********\n");
+                       do{
+                           GPUs = Integer.parseInt(JOptionPane.showInputDialog("1. ZOTAC Geforce 1030 2GB, precio:65mil colones (Gama baja)\n" + 
+                                                                                "2. ASUS Geforce GTX 1650 Super phoenix 4GB, precio: 130mil colones (Gama media)\n" + 
+                                                                                "3. MSI Geforce RTX 2080TI GAMING X TRIO 11GB, precio: 889mil colones (Gama alta)\n" + 
+                                                                                "0. Ir al menu principal"));
+                           switch(GPUs){
+                               case 1:
+                                   int CProducto = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto = "Zotac Geforce 1030 2GB ";
+                                   String marca = "Zotac";
+                                   int PrecioProducto = 65000;
+                                   GPUs gamabaja = new GPUs(NProducto, CProducto, marca, PrecioProducto);
+                                   gamabaja.CalcularPrecio(PrecioProducto, CProducto);
+                                   break;
+                               case 2:
+                                   int CProducto2 = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto2 = "Asus Geforce GTX 1650 super";
+                                   String marca2 = "ASUS";
+                                   int PrecioProducto2 = 130000;
+                                   GPUs gamamedia = new GPUs(NProducto2, CProducto2, marca2, PrecioProducto2);
+                                   gamamedia.CalcularPrecio(PrecioProducto2, CProducto2);
+                                   break;
+                               case 3:
+                                   int CProducto3 = Integer.parseInt(JOptionPane.showInputDialog("Inserte la cantidad a llevar"));
+                                   String NProducto3 = "MSI Geforce RTX 2080TI GAMING X TRIO 11GB";
+                                   String marca3 = "MSI";
+                                   int PrecioProducto3 = 889000;
+                                   GPUs gamaAlta = new GPUs(NProducto3, CProducto3, marca3, PrecioProducto3);
+                                   gamaAlta.CalcularPrecio(PrecioProducto3, CProducto3);
+                                   break;
+                                   
+                                   
+                            }// fin de switch anidado para el GPUs
+                       }while(GPUs != 0);// fin de do while para el GPUs
+break;
                case 3://RAM
                    int RAMOp = 0;
                         JOptionPane.showMessageDialog(null,"***********Bienvenido al apartado de RAM***********\n" + 
